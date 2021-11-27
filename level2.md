@@ -1,26 +1,35 @@
-#Solution for Level 2 Challenge
+# Solution for Level 2 Challenge
 
-***Expected parameters:*** input_string
+***Expected parameters:*** 
+input_string
 
 
 ***Sample Input:***
+
 input_string = "Banana"
 
+
 ***Sample Output:***
+
 anana
 
 
 ***Sample Input:***
+
 input_string = "Madama"
 
 ***Sample Output:***
 madam
 
 ***Time Complexity:***
+
 O(n^2) Quadratic for determining and checking if the current_substring is a palindrome with the best length
 
+
 ***Space Complexity: ***
+
 O(1) - Constant Space for the longest_palindrome
+
 
 ```javascript
 function getLongestPalindrome(input_string) {
