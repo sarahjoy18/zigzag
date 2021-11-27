@@ -228,5 +228,5 @@ function getPalindromeCuts(input_string) {
 
     //return the value of the currently considered 'best palindrome cuts' inside the string
     //return how many cuts are there and display the sorted palindromes array
-    return (sorted_palindromes.length - 1) + ' <code>//' + sorted_palindromes.join(' | ') + '</code>';
+    return (sorted_palindromes.length - 1) + ' <code>' + sorted_palindromes.join(' | ') + '</code>';
 }

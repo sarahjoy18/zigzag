@@ -35,9 +35,15 @@ The following codes are for:
 
 ***The solutions to the coding challenge was written in `Javascript`***
 
+***The explanation to the solutions can be viewed in `level1.md`,`level2.md`,`level3.md`***
+
 
 ***To Test***
 
+> Locally
 1. Kindly download the files
 
 2. Open index.html in browser (preferably Google Chrome)
+
+> Published
+1. Go to [https://sarahjoy18.github.io/zigzag](https://sarahjoy18.github.io/zigzag)
