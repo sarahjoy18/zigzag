@@ -6,7 +6,7 @@
 
 > Date Created: Nov 27, 2021
 
-> Date Modifed: Nov 28, 2021***
+> Date Modifed: Nov 28, 2021
 
 
 The following codes are for:
@@ -15,14 +15,17 @@ The following codes are for:
     ```javascript
     function isPalindrome(input_string) 
     ```
+
 2.  Determining the longest palindromic substring
     ```javascript
     function getLongestPalindrome(input_string)
     ```
+
 3.  Slicing string into set of palindromes and determine the minimum cut
     ```javascript
-   function getPalindromeCuts(input_string) 
+    function getPalindromeCuts(input_string)
     ```
+
 
 ***Related pages:*** 
 

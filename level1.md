@@ -38,11 +38,11 @@ function isPalindrome(input_string) {
 
     //separate the input string per letter and put it into an array
     var letters = input_string.split('');
-    // >letters = ['n','u','r','s','e','s']
+    // >letters = ['n','u','r','s','e','s', 'r','u','n']
 
     //reverse the elements inside the array and store it in an array variable
     var reversed_array = letters.reverse();
-    // >reversed_array = ['n','u','r','s','e','s']
+    // >reversed_array = ['n','u','r','s','e','s','r','u','n']
 
     //join the array elements (reversed) into a new string
     var reversed_string = reversed_array.join('');

@@ -1,6 +1,7 @@
 /*
 Author: Sarah Joy Lambino
 Date Created: Nov 27, 2021
+Last Modified: Nov 28, 2021
 
 The following codes are for:
  1. Determining if a string is a palindrome
@@ -30,29 +31,23 @@ O(1) - Constant space
 function isPalindrome(input_string) {
     //remove the spaces in the input string first
     input_string = input_string.replaceAll(' ', '');
-    // >Nursesrun
 
     //change all letters to lowercase
     input_string = input_string.toLowerCase();
-    // >nursesrun
 
     //separate the input string per letter and put it into an array
     var letters = input_string.split('');
-    // >letters = ['n','u','r','s','e','s']
 
     //reverse the elements inside the array and store it in an array variable
     var reversed_array = letters.reverse();
-    // >reversed_array = ['n','u','r','s','e','s']
 
     //join the array elements (reversed) into a new string
     var reversed_string = reversed_array.join('');
-    // >reversed_string = nursesrun
 
     //compare the reversed string with the input string 
     //if it has the same value, then it is considered a palindrome
     //return the result of comparison
     return input_string === reversed_string;
-    // >true
 
     //The code above could also be optimized into a one line of code 
     //like this
@@ -113,96 +108,16 @@ function getLongestPalindrome(input_string) {
             left_pointer = center;
             right_pointer = center + 1;
 
-            /*
-                            --distance = 0
-                *           --center = 0
-                b a n a n a
-                ^           --left pointer = 0
-                  ^         --right pointer = 1
-                
-            */
         } else {
             //if odd
             //check it from the centermost letter then outward
             left_pointer = center - 1;
             right_pointer = center + 1;
 
-            /*
-            
-                            --distance = 1 
-                    *       --center = 2
-                m a d a m
-                  ^         --left pointer = 1
-                      ^     --right pointer = 3
-
-            */
         }
 
         //start checking outward increment the distance from the center by 1
         for (distance = 1; distance < total_length; distance++) {
-
-            /*
-                loop of pointers for even-length string
-                ----------------------------
-                ----------------------------
-
-                            --distance = 1
-                *           --center = 0
-                b a n a n a
-               ^            --left pointer = -1
-                    ^       --right pointer = 2
-
-                ----------------------------
-                ----------------------------
-                            --distance = 2
-                *           --center = 0
-                b a n a n a
-             ^              --left pointer = -2
-                      ^     --right pointer = 3
-
-                ----------------------------
-                ----------------------------
-
-                            --distance = 3
-                *           --center = 0
-                b a n a n a
-            ^               --left pointer = -3
-                        ^   --right pointer = 4
-
-                once the center iterated to 1
-
-                            --distance = 0
-                  *         --center = 1
-                b a n a n a
-                ^           --left pointer = 0
-                    ^       --right pointer = 2
-
-
-
-                --------------------------------
-                --------------------------------
-
-
-
-                loop of pointers for odd-length string
-                ----------------------------
-                ----------------------------
-
-                            --distance = 2
-                    *       --center = 2
-                m a d a m
-                ^           --left pointer = 0
-                       ^    --right pointer = 4
-
-                ----------------------------
-                ----------------------------
-                            --distance = 3
-                    *       --center = 2
-                m a d a m
-               ^            --left pointer = -1
-                          ^ --right pointer = 5
-            
-            */
 
             //check if the pointers are within the range of the input string
             //this will save time, in case the center pointer doesn't have a valid prefix or suffix 
@@ -274,7 +189,6 @@ function getPalindromeCuts(input_string) {
     //copy the value of input string to the remaining letters
     //initially, all letters are not yet checked
     remaining_letters = input_string;
-    /*  remaining_letters = "noonabbada" */
 
     //loop thru the input string and check the best palindrome cuts, from the beginning to end of the string
     for (i = 0; i < input_string.length; i++) {
@@ -290,18 +204,6 @@ function getPalindromeCuts(input_string) {
             //remove that palindrome cut from the remaining letters
             remaining_letters = remaining_letters.replaceAll(palindrome, '');
         }
-
-        /*
-            palindrome = "noon"
-            palindromes = ["noon"]
-            remaining_letters = "abbada"
-
-            =================================
-
-            palindrome = "abba"
-            palindromes = ["noon", "abba"]
-            remaining_letters = "da"
-        */
     }
 
 
@@ -310,19 +212,6 @@ function getPalindromeCuts(input_string) {
     $.each(palindromes, function(key, value) {
         var position_in_string = input_string.lastIndexOf(value);
         sorted_palindromes[position_in_string] = value;
-
-        /*
-            value ="noon"
-            position_in_string = 0
-            sorted_palindromes = [0=>"noon"]
-
-            =================================
-
-            value ="abba"
-            position_in_string = 4
-            sorted_palindromes = [0=>"noon", 4=>"abba"]
-        */
-
     });
 
     //include the remaining letters from the input string that are not palindromes
@@ -331,18 +220,6 @@ function getPalindromeCuts(input_string) {
         $.each(remaining_letters.split(''), function(key, value) {
             var position_in_string = input_string.lastIndexOf(value);
             sorted_palindromes[position_in_string] = value;
-
-            /*
-            value ="d"
-            position_in_string = 8
-            sorted_palindromes = [0=>"noon", 4=>"abba", 8=>"d"]
-
-            ====================================================
-
-            value ="a"
-            position_in_string = 9
-            sorted_palindromes = [0=>"noon", 4=>"abba", 8=>"d", 9=>"a"]
-            */
         })
     }
 
