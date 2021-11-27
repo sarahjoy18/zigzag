@@ -1,17 +1,27 @@
-#Solution for Level 1 Challenge
+# Solution for Level 1 Challenge
 
-***Expected parameters***: input_string
+***Expected parameters:*** 
 
-***Sample Input:**
+input_string
+
+
+***Sample Input:***
+
 input_string = "Nurses run"
 
-***Sample Output:**
+
+***Sample Output:***
+
 true
 
+
 ***Time Complexity:***
+
 O(1) - Constant time, no matter how big the input string is, it takes the same amount of time to get the palindrome
 
+
 ***Space Complexity:***
+
 O(1) - Constant space
 
 
