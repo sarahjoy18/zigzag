@@ -1,25 +1,38 @@
-#Solution for Level 3 Challenge
+# Solution for Level 3 Challenge
 
-***Expected parameters:*** input_string
+***Expected parameters:*** 
+input_string
+
 
 ***Sample Input:***
+
 input_string = "noonabbada"
 
 ***Sample Output:***
+
 3 // noon | abba | d | a
 
 ***Time Complexity:***
+
 O(n^2) for the possible substrings (remaining_letters) and checking the best palindrome cuts
+
 O(n) for sorting the palindromes
 
+
 =O(n^2 x n)
+
 =O(n^3)
 
+
 ***Space Complexity***
+
 O(n^2) for the recursion on remaining_letters
+
 O(n) for the palindrome cuts (stored in 1 dimensional array)
 
+
 =O(n^2 x n)
+
 =O(n^3)
 
 
