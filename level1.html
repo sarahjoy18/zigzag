@@ -70,6 +70,42 @@
                     <strong>Space Complexity: </strong>
                     <br/> O(1)&nbsp;- Constant space
                 </p>
+
+                <a href="https://github.com/sarahjoy18/zigzag/blob/dev/level1.md"><button class="btn btn-primary">Read More...</button></a>
+
+                <div class="code_snippet">
+                    <pre>
+                        <code>
+                            <span class="storage-type">function</span> <span class="function-argument">isPalindrome</span>(<span class="tag-attribute">input_string</span>) {
+                                <span class="comment">//remove the spaces in the input string first</span>
+                                <span class="tag-attribute">input_string</span> <span class="tag-name">=</span> <span class="tag-attribute">input_string</span>.<span class="function-argument">replaceAll</span>(' ', '');
+
+                                <span class="comment">//change all letters to lowercase</span>
+                                <span class="tag-attribute">input_string</span> <span class="tag-name">=</span> <span class="tag-attribute">input_string</span>.<span class="function-argument">toLowerCase</span>();
+
+                                <span class="comment">//separate the input string per letter and put it into an array</span>
+                                <span class="storage-type">var</span> letters <span class="tag-name">=</span> <span class="tag-attribute">input_string</span>.<span class="function-argument">split</span>('');
+
+                                <span class="comment">//reverse the elements inside the array and store it in an array variable</span>
+                                <span class="storage-type">var</span> reversed_array <span class="tag-name">=</span> letters.<span class="function-argument">reverse</span>();
+
+                                <span class="comment">//join the array elements (reversed) into a new string</span>
+                                <span class="storage-type">var</span> reversed_string <span class="tag-name">=</span> reversed_array.<span class="function-argument">join</span>('');
+
+                                <span class="comment">//compare the reversed string with the input string 
+                                //if it has the same value, then it is considered a palindrome
+                                //return the result of comparison</span>
+                                <span class="tag-name">return</span> <span class="tag-attribute">input_string</span> <span class="tag-name">===</span> reversed_string;
+
+                                <span class="comment">
+                                //The code above could also be optimized into a one line of code 
+                                //like this
+                                // return input_string == input_string.replaceAll(' ', '').toLowerCase().split('').reverse().join('');
+                                </span>
+                            }
+                        </code>
+                    </pre>
+                </div>
             </div>
         </div>
     </div>
