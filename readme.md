@@ -47,3 +47,8 @@ The following codes are for:
 
 > Published
 1. Go to [https://sarahjoy18.github.io/zigzag](https://sarahjoy18.github.io/zigzag)
+
+
+
+***Also tried solving the coding challenge in `Python`***
+To check, kindly navigate to [/python_version](https://github.com/sarahjoy18/zigzag/tree/master/python_version)
