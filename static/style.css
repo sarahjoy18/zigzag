@@ -1,0 +1,66 @@
+body {
+    background: linear-gradient(70deg, #e6e6e6, #f7f7f7);
+    color: #514b64;
+    min-height: 100vh;
+}
+
+code {
+    background: #fff;
+    padding: 0.2rem;
+    border-radius: 0.2rem;
+    margin: 0 0.3rem;
+}
+
+pre>code {
+    background: #272822;
+    color: rgb(248, 248, 242);
+    font-size: 12px;
+}
+
+.code_snippet {
+    margin: 30px;
+    border: 2px black solid;
+    background: #272822;
+    color: rgb(248, 248, 242);
+    font-size: 12px;
+    border-radius: 0.5rem;
+}
+
+.tag-name {
+    color: #f92672;
+}
+
+.function-argument {
+    color: #a6e22e;
+}
+
+.tag-attribute {
+    color: #fd971f;
+}
+
+.storage-type {
+    color: #66d9ef;
+}
+
+.user-defined-constant {
+    color: #ae81ff;
+}
+
+.string {
+    color: #e6db74;
+}
+
+.comment {
+    color: #75715e;
+}
+
+.background {
+    background: rgb(248, 248, 242);
+    color: #272822;
+}
+
+.about {
+    color: #66d9ef;
+    text-align: center;
+    text-decoration: none;
+}
