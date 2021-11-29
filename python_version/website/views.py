@@ -1,7 +1,7 @@
 
 """ Author: Sarah Joy Lambino
 Date Created: Nov 28, 2021
-Last Modified: Nov 28, 2021
+Last Modified: Nov 29, 2021
 
 The following codes are for:
  1. Determining if a string is a palindrome
@@ -58,6 +58,8 @@ O(1) - Constant space
 
 @views.route("/isPalindrome/<input_string>", methods=["POST", "GET"])
 def isPalindrome(input_string):
+    # removed the spaces in the input string and make sure all letters are changed to lowercase
+    input_string = input_string.replace(' ', '').lower()
 
     # compare the reversed string with the input string
     # if it has the same value, then it is considered a palindrome
